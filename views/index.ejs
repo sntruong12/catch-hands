@@ -2,13 +2,5 @@
 
   <h1><%= title %></h1>
   <p>Welcome to <%= title %></p>
-  <img src="https://media.giphy.com/media/sJCiyM5KpSl5m/giphy.gif" alt="donkey kong">
-  <!-- Login  -->
-  <% if (user) { %>
-    <a href="/logout">Log Out</a>
-  <% } else { %>
-    <a href="/auth/google">Login with Google</a>
-  <% } %>
-  <!-- End login -->
 
 <%- include('./partials/footer') %>
