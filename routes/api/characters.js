@@ -6,6 +6,6 @@ router.get('/characters', charactersCtrl.getAllCharacters);
 router.get('/characters/:id', charactersCtrl.getOneCharacter);
 router.post('/characters', charactersCtrl.createCharacter);
 router.put('/characters/:id', charactersCtrl.updateCharacter)
-// router.delete('/characters/:id', charactersCtrl.deleteCharacter)
+router.delete('/characters/:id', charactersCtrl.deleteCharacter)
 
 module.exports = router;

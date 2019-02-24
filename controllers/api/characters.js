@@ -4,8 +4,8 @@ module.exports = {
   getAllCharacters,
   getOneCharacter,
   createCharacter,
-  updateCharacter
-  // deleteCharacter
+  updateCharacter,
+  deleteCharacter
 };
 
 function getAllCharacters(req, res) {
@@ -40,10 +40,10 @@ function updateCharacter(req, res) {
     })
 }
 
-// function deleteCharacter(req, res) {
-//   Character.findOneAndDelete( {id: req.params.id} )
-//     .then(character => {
-//       res.status(200)
-//         .json(character)
-//     })
-// }
+function deleteCharacter(req, res) {
+  Character.findOneAndDelete( {id: req.params.id} )
+    .then(character => {
+      res.status(200)
+        .json(character)
+    })
+}
