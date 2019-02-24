@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 var passport = require('passport');
-var usersCtrl = require('../controllers/users');
+var indexCtrl = require('../controllers/index');
 
-router.get('/', usersCtrl.index);
+router.get('/', indexCtrl.index);
 
 // Google OAuth routes
 router.get('/auth/google', passport.authenticate(
