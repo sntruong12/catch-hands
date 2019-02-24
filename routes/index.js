@@ -4,6 +4,8 @@ var passport = require('passport');
 var usersCtrl = require('../controllers/users');
 
 router.get('/', usersCtrl.index);
+
+// Google OAuth routes
 router.get('/auth/google', passport.authenticate(
   'google',
   { scope: ['profile', 'email'] }
