@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var passport = require('passport');
 var logger = require('morgan');
+var cors = require('cors');
 
 // load the .env variables
 require('dotenv').config();
@@ -12,10 +13,16 @@ require('dotenv').config();
 require('./config/database');
 require('./config/passport');
 
+// import user routes
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+// import api routes
+var charactersApiRouter = require('./routes/api/characters');
+
 var app = express();
+
+app.use(cors());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -36,8 +43,12 @@ app.use(passport.session());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+// user routes
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
+// api routes
+app.use('/api', charactersApiRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
