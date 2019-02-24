@@ -5,6 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title><%= title %></title>
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
   <link rel='stylesheet' href='/stylesheets/style.css' />
+
+  <!-- UIkit JS -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit-icons.min.js"></script>
 </head>
 <body>
+
+  <nav class="uk-navbar-container" uk-navbar>
+    <div class="uk-navbar-center">
+      <a href="/" class="uk-navbar-item uk-logo"><img src="https://media.giphy.com/media/sJCiyM5KpSl5m/giphy.gif" alt="donkey kong"></a>
+    </div>
+
+    <div class="uk-navbar-right">
+      <div>
+        <a href="#offcanvas-nav-primary" uk-toggle class="uk-navbar-item"><span uk-icon="icon: menu; ratio: 1.5"></span></a>
+      </div>
+    </div>
+
+  </nav>
+
+  <!-- Off Canvas Menu -->
+  <div id="offcanvas-nav-primary" uk-offcanvas="mode: reveal; overlay: true; flip: true">
+    <button class="uk-offcanvas-close" type="button" uk-close></button>
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+      <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+        <li><a href="#">About</a></li>
+        <li><a href="#">My Characters</a></li>
+        <li><a href="#">Credits</a></li>
+        <li class="uk-nav-divider"></li>
+        <!-- Login  -->
+        <% if (user) { %>
+          <li><a href="/logout">Log Out</a></li>
+        <% } else { %>
+          <li><a href="/auth/google">Login with Google</a></li>
+        <% } %>
+        <!-- End login -->
+      </ul>
+
+    </div>
+  </div>
+  <!-- End of Off Canvas Menu -->
