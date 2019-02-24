@@ -11,16 +11,39 @@ module.exports = {
 function getAllCharacters(req, res) {
   Character.find({})
     .then(characters => {
+      var apiResponse = characters.map(character => {
+        var details = {
+          "id": character.id,
+          "name": character.name,
+          "debut": character.debut,
+          "series": character.series,
+          "image_url": character.image_url
+        }
+        return details
+      })
+      return apiResponse
+    })
+    .then(characters => {
       res.status(200)
-        .json(characters)
+      .json(characters)
     })
 }
 
 function getOneCharacter(req, res) {
-  Character.find( {id: req.params.id} )
+  Character.findOne( {id: req.params.id} )
+    .then(character => {
+      var details ={
+        "id": character.id,
+        "name": character.name,
+        "debut": character.debut,
+        "series": character.series,
+        "image_url": character.image_url
+      }
+      return details
+    })
     .then(character => {
       res.status(200)
-        .json(character[0])
+        .json(character)
     })
 }
 
