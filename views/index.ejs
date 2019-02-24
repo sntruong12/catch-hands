@@ -3,4 +3,14 @@
   <h1><%= title %></h1>
   <p>Welcome to <%= title %></p>
 
+  <div class="uk-grid-small uk-grid-match uk-flex uk-flex-center uk-flex-middle" uk-grid>
+    <% characters.forEach(character => { %>
+    <div>
+        <div class="uk-card uk-card-default uk-card-hover uk-card-small uk-card-body">
+          <a href=""><%= character.name %></a>
+        </div>
+    </div>
+    <% }) %>
+  </div>
+
 <%- include('./partials/footer') %>
