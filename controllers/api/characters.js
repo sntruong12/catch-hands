@@ -3,7 +3,9 @@ var Character = require('../../models/api/character');
 module.exports = {
   getAllCharacters,
   getOneCharacter,
-  createCharacter
+  createCharacter,
+  updateCharacter
+  // deleteCharacter
 };
 
 function getAllCharacters(req, res) {
@@ -29,3 +31,19 @@ function createCharacter(req, res) {
         .json(character)
     })
 }
+
+// function updateCharacter(req, res) {
+//   Character.findOneAndUpdate({id: req.params.id}, req.body, { new: true })
+//     .then(character => {
+//       res.status(200)
+//         .json(character)
+//     })
+// }
+
+// function deleteCharacter(req, res) {
+//   Character.findOneAndDelete( {id: req.params.id} )
+//     .then(character => {
+//       res.status(200)
+//         .json(character)
+//     })
+// }
