@@ -15,7 +15,7 @@ require('./config/passport');
 
 // import user routes
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var charactersRouter = require('./routes/characters');
 
 // import api routes
 var charactersApiRouter = require('./routes/api/characters');
@@ -45,7 +45,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // user routes
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/characters', charactersRouter);
 
 // api routes
 app.use('/api', charactersApiRouter);
