@@ -9,9 +9,9 @@ var userSchema = new Schema({
   email: {
     type: String
   },
-  characters: [{
+  fighters: [{
     type: Schema.Types.ObjectId,
-    ref: 'Character'
+    ref: 'Fighter'
   }],
   googleId: String
 }, {

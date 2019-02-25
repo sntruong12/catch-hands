@@ -15,10 +15,10 @@ require('./config/passport');
 
 // import user routes
 var indexRouter = require('./routes/index');
-var charactersRouter = require('./routes/characters');
+var fightersRouter = require('./routes/fighters');
 
 // import api routes
-var charactersApiRouter = require('./routes/api/characters');
+var fightersApiRouter = require('./routes/api/fighters');
 
 var app = express();
 
@@ -45,10 +45,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // user routes
 app.use('/', indexRouter);
-app.use('/characters', charactersRouter);
+app.use('/fighters', fightersRouter);
 
 // api routes
-app.use('/api', charactersApiRouter);
+app.use('/api', fightersApiRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

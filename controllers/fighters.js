@@ -10,21 +10,21 @@ module.exports = {
 function index(req, res) {
   var options = {
     // figure out how to get dynamic url
-    uri: 'http://localhost:3000/api/characters',
+    uri: 'http://localhost:3000/api/fighters',
     json: true
   }
 
   rp(options)
-    .then(characters => {
-      res.render('characters/index', { 
+    .then(fighters => {
+      res.render('fighters/index', { 
         title: 'Catch Hands',
         user: req.user,
-        characters
+        fighters
       });
     })
     .catch(err => {
-      console.log(err, 'error getting characters');
-      res.render('characters/index', {
+      console.log(err, 'error getting fighters');
+      res.render('fighters/index', {
         title: 'Catch Hands',
         user: req.user
       })
@@ -34,16 +34,16 @@ function index(req, res) {
 function show(req, res) {
   var options = {
     // figure out how to get dynamic url
-    uri: `http://localhost:3000/api/characters/${req.params.id}`,
+    uri: `http://localhost:3000/api/fighters/${req.params.id}`,
     json: true
   }
 
   rp(options)
-    .then(character => {
-      res.render('characters/show', {
+    .then(fighter => {
+      res.render('fighters/show', {
         title: 'Catch Hands',
         user: req.user,
-        character
+        fighter
       })
     })
 }

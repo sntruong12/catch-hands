@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
-var characterSchema = new Schema({
+var fighterSchema = new Schema({
   id: {
     type: Number,
     required: true
@@ -30,4 +30,4 @@ var characterSchema = new Schema({
   timestamps: true
 });
 
-module.exports = mongoose.model('character', characterSchema);
+module.exports = mongoose.model('fighter', fighterSchema);
