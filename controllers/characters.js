@@ -15,7 +15,7 @@ function index(req, res) {
 
   rp(options)
     .then(characters => {
-      res.render('index', { 
+      res.render('characters/index', { 
         title: 'Catch Hands',
         user: req.user,
         characters
@@ -23,7 +23,7 @@ function index(req, res) {
     })
     .catch(err => {
       console.log(err, 'error getting characters');
-      res.render('index', {
+      res.render('characters/index', {
         title: 'Catch Hands',
         user: req.user
       })
