@@ -17,7 +17,8 @@ function getAllCharacters(req, res) {
           "name": character.name,
           "debut": character.debut,
           "series": character.series,
-          "image_url": character.image_url
+          "image_url": character.image_url,
+          "combos": character.combos
         }
         return details
       })

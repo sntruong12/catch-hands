@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
-var characterApiSchema = new Schema({
+var characterSchema = new Schema({
   id: {
     type: Number,
     required: true
@@ -22,9 +22,12 @@ var characterApiSchema = new Schema({
   image_url: {
     type: String,
     required: true
-  }
+  },
+  combos: [{
+    type: String,
+  }]
 }, {
   timestamps: true
 });
 
-module.exports = mongoose.model('characterApi', characterApiSchema);
+module.exports = mongoose.model('character', characterSchema);
