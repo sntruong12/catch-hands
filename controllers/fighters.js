@@ -43,6 +43,7 @@ function show(req, res) {
       res.render('fighters/show', {
         title: 'Catch Hands',
         user: req.user,
+        id: req.params.id,
         fighter
       })
     })
