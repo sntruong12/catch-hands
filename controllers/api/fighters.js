@@ -33,12 +33,13 @@ function getAllFighters(req, res) {
 function getOneFighter(req, res) {
   Fighter.findOne( {id: req.params.id} )
     .then(fighter => {
-      var details ={
+      var details = {
         "id": fighter.id,
         "name": fighter.name,
         "debut": fighter.debut,
         "series": fighter.series,
-        "image_url": fighter.image_url
+        "image_url": fighter.image_url,
+        "combos": fighter.combos
       }
       return details
     })
