@@ -3,7 +3,10 @@
   <h1><%= title %></h1>
   <p>My Mains</p>
   <% mains.forEach(main => { %>
-    <p><%= main %></p>
+    <p><%= main.name %></p>
+    <form action="/mains/<%= main.id %>?_method=DELETE" method="POST">
+      <button class="uk-button uk-button-small uk-button-danger" type="submit">X</button>
+    </form>
   <% }) %>
 
 <%- include('../partials/footer') %>
