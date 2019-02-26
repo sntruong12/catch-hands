@@ -4,4 +4,7 @@ var mainsCtrl = require('../controllers/mains');
 
 router.get('/', mainsCtrl.index);
 
+// add a fighter to the user's mains
+router.get('/add/:id', mainsCtrl.addFighter);
+
 module.exports = router;
