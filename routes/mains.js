@@ -3,6 +3,7 @@ var router = express.Router();
 var mainsCtrl = require('../controllers/mains');
 
 router.get('/', mainsCtrl.index);
+router.get('/:id', mainsCtrl.show);
 
 // add a fighter to the user's mains
 router.get('/add/:id', mainsCtrl.addMain);
