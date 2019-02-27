@@ -4,21 +4,38 @@ var User = require('../models/user');
 
 module.exports = {
   index,
+  show,
   addMain,
   destroyMain,
   destroyAllMains
 }
 
 function index(req, res) {
+  console.log(req.user)
   User.findOne( { googleId: req.user.googleId } )
     .then(user => {
-      console.log(user.mains);
       res.render('mains/index', {
         title: 'Catch Hands',
         user: req.user,
         mains: user.mains
       })
     })
+}
+
+function show(req, res) {
+  var mains = req.user.mains
+  // find the main matching the req.params.id
+  var filterMains = mains.filter(m => {
+    return m.id === parseInt(req.params.id)
+  })
+  // get the first and only element in the filterMains array
+  var main = filterMains[0]
+  console.log(main)
+  res.render('mains/show', {
+    title: 'Catch Hands',
+    user: req.user,
+    main: main
+  })
 }
 
 function addMain(req, res) {
@@ -30,7 +47,6 @@ function addMain(req, res) {
 
   rp(options)
     .then(fighter => {
-      console.log(fighter, "API RESPONSE SON!")
       var newMain = {
         "id": fighter.id,
         "name": fighter.name,
