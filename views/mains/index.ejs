@@ -3,7 +3,9 @@
   <h1><%= title %></h1>
   <p>My Mains</p>
   <% mains.forEach(main => { %>
-    <p><%= main.name %></p>
+    <a class="uk-link-text" href="/mains/<%= main.id %>">
+      <%= main.name %>
+    </a>
     <form action="/mains/<%= main.id %>?_method=DELETE" method="POST">
       <button class="uk-button uk-button-small uk-button-danger" type="submit">X</button>
     </form>
