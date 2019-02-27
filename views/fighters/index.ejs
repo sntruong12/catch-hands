@@ -6,10 +6,14 @@
   <div class="uk-grid-small uk-grid-match uk-flex uk-flex-center uk-flex-middle" uk-grid>
     <% fighters.forEach(fighter => { %>
     <div>
-        <div class="uk-card uk-card-default uk-card-hover uk-card-small uk-card-body">
-          <a href="/fighters/<%= fighter.id %>">
-            <%= fighter.name %>
-          </a>
+        <div class="uk-card uk-card-default uk-card-hover uk-card-small uk-card-body uk-inline uk-transition-toggle" tabindex="0">
+          <img src="<%= fighter.image_url %>" width="100px" alt="" uk-img>
+          <div class="uk-overlay-default uk-position-cover uk-transition-fade"></div>
+          <div class="uk-overlay uk-position-bottom uk-text-center uk-transition-fade uk-padding-remove">
+            <a class="uk-link-muted" href="/fighters/<%= fighter.id %>">
+              <%= fighter.name %>
+            </a>
+          </div>
         </div>
     </div>
     <% }) %>
