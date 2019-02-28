@@ -30,11 +30,11 @@ function show(req, res) {
   })
   // get the first and only element in the filterMains array
   var main = filterMains[0]
-  console.log(main)
   res.render('mains/show', {
     title: 'Catch Hands',
     user: req.user,
-    main: main
+    main: main,
+    combos: main.combos
   })
 }
 
