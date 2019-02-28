@@ -18,6 +18,7 @@ require('./config/passport');
 var indexRouter = require('./routes/index');
 var fightersRouter = require('./routes/fighters');
 var mainsRouter = require('./routes/mains');
+var combosRouter = require('./routes/combos')
 
 // import api routes
 var fightersApiRouter = require('./routes/api/fighters');
@@ -50,6 +51,7 @@ app.use(methodOverride('_method'));
 app.use('/', indexRouter);
 app.use('/fighters', fightersRouter);
 app.use('/mains', mainsRouter);
+app.use('/', combosRouter);
 
 // api routes
 app.use('/api', fightersApiRouter);
