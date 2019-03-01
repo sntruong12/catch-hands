@@ -21,9 +21,9 @@ As a user, I want to remove fighters that I no longer main.
 
 Here is a [link](https://www.lucidchart.com/invitations/accept/8a5562a2-b134-4c3d-a030-9854196c49fe) to the wireframe.
 
-![ERD](https://i.imgur.com/l6xYLbI.png "Catch Hands ERD")
-
 Here is a [link](https://www.lucidchart.com/invitations/accept/a9fd1264-b675-40b2-9343-40717bf91601) to the ERD.
+
+![ERD](https://i.imgur.com/l6xYLbI.png "Catch Hands ERD")
 
 ## Technology Stack
 
