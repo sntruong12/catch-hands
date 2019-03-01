@@ -5,12 +5,9 @@ module.exports = {
 }
 
 function create(req, res) {
-  req.user.mains.map((item) => {
-
-    if (item.id === parseInt(req.params.id)) {
-
-      item.combos.push(req.body.combo);
-
+  req.user.mains.map((main) => {
+    if (main.id === parseInt(req.params.id)) {
+      main.combos.push(req.body.combo);
     }
   });
   req.user.save();
