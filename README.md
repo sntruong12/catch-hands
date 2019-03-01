@@ -30,11 +30,13 @@ Here is a [link](https://www.lucidchart.com/invitations/accept/a9fd1264-b675-40b
 1. Mongoose/MongoDB, Express, NodeJS
 2. OAuth Google Authentication using PassportJS
 
-## Challenges
+## Challenges/Lessons
 
 1. The first challenge that I faced was how do I get all the character information for Super Smash Brothers Ultimate. The game was released early in December 2018 so there wasn't an API containing general information for each character. I decided to create my own RESTFUL api for this. 
 
-2. A challenge I faced concerned my data model. When I finally reached the point of posting combos to each of the user's mains, I was not able to figure out how to push data into this nested array in my User model. The end goal was to get user input from a form and push it into the main combos array. After tons of googling, I decided to redo my user model which ultimate. As far as my research goes, I found many other people facing this issue of updating properties that were nested in 2 levels. This seemed to be an issue with Mongoose and MongoDB. In general this relational database does not seem to do well with querying nested data beyond 1 level. This ended up being a lack of knowledge issue. I overthought my approach. I just needed to map over the the mains array, push the form data, and save.
+2. A problem I faced constantly throughout development was with modeling data. I finally reached the point of posting combos to each of the user's mains, I was not able to figure out how to push data into this nested array in my User model. The end goal was to get user input from a form and push it into the main combos array. After tons of googling, I decided to redo my user model As far as my research goes, I found many other people facing this issue of updating properties that were nested in 2 levels. This seemed to be an issue with Mongoose and MongoDB. In general this relational database does not seem to do well with querying nested data beyond 1 level. This ended up being a lack of knowledge issue. I overthought my approach. I just needed to map over the the mains array, push the form data, and save. 
+
+3. Array methods are a blessing. This project provided tons of opportunities to use Array methods like .map or .filter. Specifically for any nested data, these methods really helped with finding a specifical element and manipulating it.
 
 ## Catch Hands API
 
