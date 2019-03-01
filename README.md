@@ -1,5 +1,7 @@
 # Catch Hands
 
+![donkey kong](https://media.giphy.com/media/sJCiyM5KpSl5m/giphy.gif "catch these hands")
+
 Super Smash Brothers Ultimate, a fighting game on the Nintendo Switch, has sold over 12 millions copies over in less than 2 months from the release date on December 6th, 2018. With a huge following, there are many gamers hungry to get better at the game. As with many fighting games, it's incredibly important to know your fighter's bread and butter moves aka COMBOS. Catch Hands is an app that provides users the ability to track fighters and add combos for the fighter. From a technical standpoint, Catch Hands is a CRUD application that follows the MVC architectural pattern. In addition, Catch Hands also provides a RESTful API for general information on all Super Smash Brothers Ultimate Fighters.
 
 
