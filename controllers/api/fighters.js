@@ -18,7 +18,7 @@ function getAllFighters(req, res) {
           "debut": fighter.debut,
           "series": fighter.series,
           "image_url": fighter.image_url,
-          "combos": fighter.combos
+          // "combos": fighter.combos
         }
         return details
       })
@@ -39,7 +39,7 @@ function getOneFighter(req, res) {
         "debut": fighter.debut,
         "series": fighter.series,
         "image_url": fighter.image_url,
-        "combos": fighter.combos
+        // "combos": fighter.combos
       }
       return details
     })
