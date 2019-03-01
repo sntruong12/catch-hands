@@ -1,8 +1,9 @@
 <%- include('../partials/header') %>
-
+<div class="uk-flex uk-flex-center uk-flex-middle" uk-grid>
   <h1><%= main.name %></h1>
-  <img src="<%= main.image_url %>" width="250px" alt="<%= main.name %>">
   <h2>Combos</h2>
+  <img src="<%= main.image_url %>" width="250px" alt="<%= main.name %>">
+
   <ul class="uk-subnav uk-subnav-pill" uk-switcher>
       <li><a href="#">View</a></li>
       <li><a href="#">Add</a></li>
@@ -30,5 +31,5 @@
     </li>
     <li><a href="/mains">Fighters here</a></li>
   </ul>
-
+</div>
 <%- include('../partials/footer') %>
