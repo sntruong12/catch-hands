@@ -10,7 +10,7 @@ module.exports = {
 function index(req, res) {
   var options = {
     // figure out how to get dynamic url
-    uri: 'http://localhost:3000/api/fighters',
+    uri: 'https://catch-hands.herokuapp.com/api/fighters',
     json: true
   }
 
@@ -34,7 +34,7 @@ function index(req, res) {
 function show(req, res) {
   var options = {
     // figure out how to get dynamic url
-    uri: `http://localhost:3000/api/fighters/${req.params.id}`,
+    uri: `https://catch-hands.herokuapp.com/api/fighters/${req.params.id}`,
     json: true
   }
 
