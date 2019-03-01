@@ -41,7 +41,7 @@ function show(req, res) {
 function addMain(req, res) {
   var options = {
     // figure out how to get dynamic url
-    uri: `http://localhost:3000/api/fighters/${req.params.id}`,
+    uri: `https://catch-hands.herokuapp.com/api/fighters/${req.params.id}`,
     json: true
   }
 
