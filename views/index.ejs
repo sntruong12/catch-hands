@@ -1,5 +1,38 @@
 <%- include('./partials/header') %>
 
-<h1><%= title %></h1>
+<h1 class="uk-text-center uk-text-uppercase"><%= title %></h1>
+
+<p class="uk-text-center">Supplying you with combo knowledge so that your friends and enemies can catch hands in Super Smash Brothers Ultimate</p>
+
+<div class="uk-grid-small uk-grid-match uk-flex uk-flex-center uk-flex-middle" uk-grid uk-height-match="target: > div > .uk-card">
+  <div>
+    <div class="uk-card uk-card-default uk-card-body uk-card-hover">
+        <h3 class="uk-card-title uk-text-center">Combos</h3>
+        <p>Log your best combos for your fighter!</p>
+    </div>
+  </div>
+  <div>
+    <div class="uk-card  uk-card-primary uk-card-body uk-card-hover">
+        <h3 class="uk-card-title uk-text-center">Fighters</h3>
+        <p>Keep track of your favorite fighters!</p>
+    </div>
+  </div>
+  <% if (user) { %>    
+    <div>
+      <div class="uk-card uk-card-secondary uk-card-body uk-card-hover">
+          <h3 class="uk-card-title uk-text-center">My Fighters</h3>
+          <a href="/mains">Go</a>
+      </div>
+    </div>
+  <% } else { %>
+    <div>
+        <div class="uk-card uk-card-secondary uk-card-body uk-card-hover">
+            <h3 class="uk-card-title uk-text-center">Start</h3>
+            <a href="/auth/google">Login Now!</a>
+        </div>
+      </div>
+  <% } %>
+</div>
+
 
 <%- include('./partials/footer') %>
