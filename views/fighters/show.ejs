@@ -1,6 +1,10 @@
 <%- include('../partials/header') %>
 
   <h1><%= fighter.name %></h1>
-  <a href="/mains/add/<%= id %>">Add Fighter</a>
-
+  <% if(user) { %>
+    <a href="/mains/add/<%= id %>">Add Fighter</a>
+  <% } else { %>
+    <a href="/auth/google">Login to add this Fighter</a>
+  <% } %>
+  
 <%- include('../partials/footer') %>
