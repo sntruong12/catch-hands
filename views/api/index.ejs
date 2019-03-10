@@ -27,15 +27,16 @@
         <a class="uk-accordion-title" href="#">
           <span class="uk-label">GET All Fighters</span>
         </a>
-        <div class="uk-accordion-content">
-          <samp>/api/fighters</samp>
-          <p>
-            Returns all the Super Smash Brothers Ultimate fighters.
-          </p>
-          <p>Sample response:</p>
-          <samp>
-              [ <br>
-              &nbsp;&nbsp;{ <br>
+        <div class="uk-accordion-content uk-section uk-section-muted uk-padding">
+          <div class="uk-container">
+            <samp>/api/fighters</samp>
+            <p>
+              Returns all the Super Smash Brothers Ultimate fighters.
+            </p>
+            <p>Sample response:</p>
+            <samp>
+                [ <br>
+                &nbsp;&nbsp;{ <br>
                   &nbsp;&nbsp;&nbsp;&nbsp;"id": 1, <br>
                   &nbsp;&nbsp;&nbsp;&nbsp;"name": "Mario", <br>
                   &nbsp;&nbsp;&nbsp;&nbsp;"debut": 1981, <br>
@@ -50,31 +51,36 @@
                   &nbsp;&nbsp;&nbsp;&nbsp;"image_url": "https://i.imgur.com/1Iz5XD2.png"<br>
                 &nbsp;&nbsp;}, <br>
                 &nbsp;&nbsp;... <br>
-               ]
-          </samp>
+                &nbsp;]
+            </samp>
+          </div>
         </div>
       </li>
+
       <li>
         <a class="uk-accordion-title" href="#">
           <span class="uk-label">GET Single Fighter</span>
         </a>
-        <div class="uk-accordion-content">
-          <samp>/api/fighters/{id}</samp>
-          <p>
-            Returns a single fighter based on the id.
-          </p>
-          <p>Sample response:</p>
-          <samp>
-              { <br>
-                &nbsp;&nbsp;"id": 2, <br>
-                &nbsp;&nbsp;"name": "Donkey Kong", <br>
-                &nbsp;&nbsp;"debut": 1981, <br>
-                &nbsp;&nbsp;"series": "Donkey Kong", <br>
-                &nbsp;&nbsp;"image_url": "https://i.imgur.com/1Iz5XD2.png"<br>
-              }
-          </samp>
+        <div class="uk-accordion-content uk-section uk-section-muted uk-padding">
+          <div class="uk-container">
+            <samp>/api/fighters/{id}</samp>
+            <p>
+              Returns a single fighter based on the id.
+            </p>
+            <p>Sample response:</p>
+            <samp>
+                { <br>
+                  &nbsp;&nbsp;"id": 2, <br>
+                  &nbsp;&nbsp;"name": "Donkey Kong", <br>
+                  &nbsp;&nbsp;"debut": 1981, <br>
+                  &nbsp;&nbsp;"series": "Donkey Kong", <br>
+                  &nbsp;&nbsp;"image_url": "https://i.imgur.com/1Iz5XD2.png"<br>
+                  &nbsp;}
+            </samp>
+          </div>
         </div>
       </li>
+
     </ul>
 </div>
 
