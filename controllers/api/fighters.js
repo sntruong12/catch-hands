@@ -5,7 +5,9 @@ module.exports = {
   getOneFighter,
   createFighter,
   updateFighter,
-  deleteFighter
+  deleteFighter,
+  // api reference page
+  index
 };
 
 function getAllFighters(req, res) {
@@ -71,4 +73,11 @@ function deleteFighter(req, res) {
       res.status(200)
         .json(fighter)
     })
+}
+
+function index(req, res) {
+  res.render('api/index', {
+    title: 'Catch Hands - API',
+    user: req.user
+  })
 }
