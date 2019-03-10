@@ -1,15 +1,15 @@
 <%- include('../partials/header') %>
 
 <div class="uk-container uk-padding">
-    <h1 class="uk-text-center uk-text-uppercase uk-heading-primary uk-heading-line">
-      <span><%= fighter.name %></span>
-    </h1>
-    <% if(user) { %>
-      <a href="/mains/add/<%= id %>">Add Fighter</a>
-    <% } else { %>
-      <a href="/auth/google">Login to add this Fighter</a>
-    <% } %>
-  </div>
+  <h1 class="uk-text-center uk-text-uppercase uk-heading-primary uk-heading-line">
+    <span><%= fighter.name %></span>
+  </h1>
+  <% if(user) { %>
+    <a href="/mains/add/<%= id %>">Add Fighter</a>
+  <% } else { %>
+    <a href="/auth/google">Login to add this Fighter</a>
+  <% } %>
+</div>
 
   
 <%- include('../partials/footer') %>
