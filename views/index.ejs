@@ -17,21 +17,18 @@
         <p class="uk-text-center">Keep track of your favorite fighters!</p>
     </div>
   </div>
-  <% if (user) { %>    
-    <div class="uk-width-1-3">
-      <div class="uk-card uk-card-secondary uk-card-body uk-card-hover">
-          <h3 class="uk-card-title uk-text-center">My Fighters</h3>
-          <a class="uk-button uk-button-default uk-flex uk-flex-center uk-flex-middle" href="/mains">Go</a>
-      </div>
+  <div class="uk-width-1-3">
+    <div class="uk-card uk-card-secondary uk-card-body uk-card-hover">
+      <% if (user) { %>    
+        <h3 class="uk-card-title uk-text-center">My Fighters</h3>
+        <a class="uk-button uk-button-default uk-flex uk-flex-center uk-flex-middle" href="/mains">Go</a>
+      <% } else { %>
+        <h3 class="uk-card-title uk-text-center">Start</h3>
+        <a class="uk-button uk-button-default uk-flex uk-flex-center uk-flex-middle" href="/auth/google">Login Now!</a>
+      <% } %>
     </div>
-  <% } else { %>
-    <div class="uk-width-1-3">
-        <div class="uk-card uk-card-secondary uk-card-body uk-card-hover">
-            <h3 class="uk-card-title uk-text-center">Start</h3>
-            <a class="uk-button uk-button-default uk-flex uk-flex-center uk-flex-middle" href="/auth/google">Login Now!</a>
-        </div>
-      </div>
-  <% } %>
+  </div>
+
 </div>
 
 
