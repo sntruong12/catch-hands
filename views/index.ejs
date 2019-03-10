@@ -1,33 +1,57 @@
 <%- include('./partials/header') %>
 
-<h1 class="uk-text-center uk-text-uppercase"><%= title %></h1>
+<div class="uk-container uk-padding">
+  <h1 class="uk-text-center uk-text-uppercase"><%= title %></h1>
+  <p class="uk-text-center">Supplying you with combo knowledge so that your friends and enemies can catch hands in Super Smash Brothers Ultimate</p>
+</div>
 
-<p class="uk-text-center">Supplying you with combo knowledge so that your friends and enemies can catch hands in Super Smash Brothers Ultimate</p>
+<hr>
 
-<div class="uk-grid-small uk-grid-match uk-flex uk-flex-center uk-flex-middle" uk-grid uk-height-match="target: > div > .uk-card">
-  <div class="uk-width-1-3">
-    <div class="uk-card uk-card-default uk-card-body uk-card-hover">
+<!-- 3 cards start -->
+<div class="uk-container uk-padding">
+  <div class="uk-grid-small uk-grid-match uk-flex uk-flex-center uk-flex-middle" uk-grid uk-height-match="target: > div > .uk-card">
+
+    <div class="uk-width-1-3@s uk-width-1-1">
+      <div class="uk-card uk-card-default uk-card-body uk-card-hover">
         <h3 class="uk-card-title uk-text-center">Combos</h3>
+        <hr>
         <p class="uk-text-center">Log your best combos for your fighter!</p>
+      </div>
     </div>
-  </div>
-  <div class="uk-width-1-3">
-    <div class="uk-card  uk-card-primary uk-card-body uk-card-hover">
+
+    <div class="uk-width-1-3@s uk-width-1-1">
+      <div class="uk-card  uk-card-primary uk-card-body uk-card-hover">
         <h3 class="uk-card-title uk-text-center">Fighters</h3>
+        <hr>
         <p class="uk-text-center">Keep track of your favorite fighters!</p>
+      </div>
     </div>
-  </div>
-  <div class="uk-width-1-3">
-    <div class="uk-card uk-card-secondary uk-card-body uk-card-hover">
-      <% if (user) { %>    
-        <h3 class="uk-card-title uk-text-center">My Fighters</h3>
-        <a class="uk-button uk-button-default uk-flex uk-flex-center uk-flex-middle" href="/mains">Go</a>
-      <% } else { %>
-        <h3 class="uk-card-title uk-text-center">Start</h3>
-        <a class="uk-button uk-button-default uk-flex uk-flex-center uk-flex-middle" href="/auth/google">Login Now!</a>
-      <% } %>
+
+    <div class="uk-width-1-3@s uk-width-1-1@s">
+      <div class="uk-card uk-card-secondary uk-card-body uk-card-hover">
+        <% if (user) { %>    
+          <h3 class="uk-card-title uk-text-center">My Fighters</h3>
+          <hr>
+          <a class="uk-button uk-button-default uk-flex uk-flex-center uk-flex-middle" href="/mains">Go</a>
+        <% } else { %>
+          <h3 class="uk-card-title uk-text-center">Start</h3>
+          <hr>
+          <a class="uk-button uk-button-default uk-flex uk-flex-center uk-flex-middle" href="/auth/google">Login Now!</a>
+        <% } %>
+      </div>
     </div>
+
   </div>
+</div>
+<!-- 3 cards end -->
+
+<hr>
+
+<!-- how to use section start -->
+<div class="uk-container uk-padding">
+  How to use
+</div>
+<!-- how to use section end -->
 
 </div>
 
