@@ -2,20 +2,19 @@
 
 <h1 class="uk-text-center uk-text-uppercase">fighters!</h1>
 
-  <div class="uk-grid-small uk-flex uk-flex-center uk-flex-middle" uk-grid>
+<div class="uk-child-width-1-6@s uk-grid-collapse uk-text-center" uk-grid>
     <% fighters.forEach(fighter => { %>
     <div>
-        <div class="uk-card uk-card-default uk-card-hover uk-card-small uk-card-body uk-inline uk-transition-toggle" tabindex="0">
-          <img src="<%= fighter.image_url %>" width="100px" alt="" uk-img>
-          <div class="uk-overlay-default uk-position-cover uk-transition-fade"></div>
-          <div class="uk-overlay uk-position-bottom uk-text-center uk-transition-fade uk-padding-remove">
+        <div class="uk-tile uk-tile-default">
+            <a class="uk-link-text" href="/fighters/<%= fighter.id %>">
+              <img src="<%= fighter.image_url %>" width="100px" alt="" uk-img>
+            </a>
             <a class="uk-link-text" href="/fighters/<%= fighter.id %>">
               <%= fighter.name %>
             </a>
-          </div>
         </div>
     </div>
     <% }) %>
-  </div>
+</div>
 
 <%- include('../partials/footer') %>
