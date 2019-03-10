@@ -1,9 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 12px
+}
+
+html,
+body {
+  height: 100%;
+  position: relative;
 }
 
 .fighter-card {
   border-style: solid;
   border-color: #e5e5e5;
   border-width: 1px;
+}
+
+.main-container {
+  min-height: 100vh; /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 176px; /* height of your footer */
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 960px) {
+  .main-container {
+    padding-bottom: 116px; /* height of your footer */
+  }
 }
