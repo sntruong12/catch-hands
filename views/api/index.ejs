@@ -1,0 +1,81 @@
+<%- include('../partials/header') %>
+
+<div class="uk-container uk-padding">
+  <h1 class="uk-text-center uk-text-uppercase uk-heading-primary uk-heading-line">
+      <span>Catch Hands API</span>
+  </h1>
+  <p class="uk-text-center">
+    The Catch Hands API provides the user with general data for all Super Smash Brothers Ultimate Fighters. 
+    <br>
+    The response to every request is sent in JSON format.
+    <br>
+    The API does not require an API key nor does it require any headers in the request.
+    <br>
+    All API access is over HTTPS or HTTP. The entry point is <samp>https://catch-hands.herokuapp.com</samp>
+    <br>
+    Simply append the <samp>route</samp> to the entry point to interact with our API.
+  </p>
+</div>
+
+<div class="uk-container uk-padding">
+    <h2 class="uk-text-uppercase uk-heading-line">
+        <span>API Reference</span>
+    </h2>
+
+    <ul uk-accordion="multiple: true">
+      <li>
+        <a class="uk-accordion-title" href="#">
+          <span class="uk-label">GET All Fighters</span>
+        </a>
+        <div class="uk-accordion-content">
+          <samp>/api/fighters</samp>
+          <p>
+            Returns all the Super Smash Brothers Ultimate fighters.
+          </p>
+          <p>Sample response:</p>
+          <samp>
+              [ <br>
+              &nbsp;&nbsp;{ <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;"id": 1, <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;"name": "Mario", <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;"debut": 1981, <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;"series": "Super Mario", <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;"image_url": "https://i.imgur.com/OZfVm7l.png"<br>
+                &nbsp;&nbsp;},<br>
+                &nbsp;&nbsp;{ <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;"id": 2, <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;"name": "Donkey Kong", <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;"debut": 1981, <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;"series": "Donkey Kong", <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;"image_url": "https://i.imgur.com/1Iz5XD2.png"<br>
+                &nbsp;&nbsp;}, <br>
+                &nbsp;&nbsp;... <br>
+               ]
+          </samp>
+        </div>
+      </li>
+      <li>
+        <a class="uk-accordion-title" href="#">
+          <span class="uk-label">GET Single Fighter</span>
+        </a>
+        <div class="uk-accordion-content">
+          <samp>/api/fighters/{id}</samp>
+          <p>
+            Returns a single fighter based on the id.
+          </p>
+          <p>Sample response:</p>
+          <samp>
+              { <br>
+                &nbsp;&nbsp;"id": 2, <br>
+                &nbsp;&nbsp;"name": "Donkey Kong", <br>
+                &nbsp;&nbsp;"debut": 1981, <br>
+                &nbsp;&nbsp;"series": "Donkey Kong", <br>
+                &nbsp;&nbsp;"image_url": "https://i.imgur.com/1Iz5XD2.png"<br>
+              }
+          </samp>
+        </div>
+      </li>
+    </ul>
+</div>
+
+<%- include('../partials/footer') %>
