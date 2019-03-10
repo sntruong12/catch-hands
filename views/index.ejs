@@ -1,11 +1,11 @@
 <%- include('./partials/header') %>
 
 <div class="uk-container uk-padding">
-  <h1 class="uk-text-center uk-text-uppercase"><%= title %></h1>
-  <p class="uk-text-center">Supplying you with combo knowledge so that your friends and enemies can catch hands in Super Smash Brothers Ultimate</p>
+  <h1 class="uk-text-center uk-text-uppercase uk-heading-primary uk-heading-line">
+    <span><%= title %></span>
+  </h1>
+  <p class="uk-text-center">Supplying you with combo knowledge so that your friends and enemies can catch hands in Super Smash Brothers Ultimate!</p>
 </div>
-
-<hr>
 
 <!-- 3 cards start -->
 <div class="uk-container uk-padding">
@@ -45,15 +45,44 @@
 </div>
 <!-- 3 cards end -->
 
-<hr>
+<!-- about section start -->
+<div class="uk-container uk-padding">
+    <h2 class="uk-text-uppercase uk-heading-line">
+        <span>about</span>
+    </h2>
+    <p class="uk-text-center">
+      I firmly believe in empowering smash players who want to better their hand deliveries. Knowing your fighter's combos is incredibly important in being a better smash player. I hope you and find some use in this tool that we provide for the community. I created Catch Hands as a part of my time as a Web Development Immersive Student at General Assembly. It's currently under construction and being updated frequently.
+    </p>
+</div>
+<!-- about section end -->
 
 <!-- how to use section start -->
 <div class="uk-container uk-padding">
-  How to use
+    <h2 class="uk-text-right uk-text-uppercase uk-heading-line">
+        <span>how to use</span>
+    </h2>
+
+    <ul uk-accordion>
+        <li>
+            <a class="uk-accordion-title" href="#">1. Sign Up</a>
+            <div class="uk-accordion-content">
+                <p>Sign up for an account first by logging in with Google. At the moment we only allow Google users. Basic account set up without a 3rd party will be implemented in the future</p>
+            </div>
+        </li>
+        <li>
+            <a class="uk-accordion-title" href="#">2. Add a Fighter</a>
+            <div class="uk-accordion-content">
+                <p>You can now go to the Fighters page and add your fighter that you main. You can even add more than one!</p>
+            </div>
+        </li>
+        <li>
+            <a class="uk-accordion-title" href="#">3. Add combos</a>
+            <div class="uk-accordion-content">
+                <p>The fighters you have added will appear in your My Fighters page. Click on your fighter and you will be able to view and add combos from there!</p>
+            </div>
+        </li>
+    </ul>
 </div>
 <!-- how to use section end -->
-
-</div>
-
 
 <%- include('./partials/footer') %>
