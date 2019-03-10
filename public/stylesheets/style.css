@@ -1,3 +1,9 @@
 html {
   font-size: 12px
 }
+
+.fighter-card {
+  border-style: solid;
+  border-color: #e5e5e5;
+  border-width: 1px;
+}
