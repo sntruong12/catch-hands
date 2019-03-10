@@ -1,2 +1,33 @@
+<div class="uk-section uk-section-secondary uk-light uk-inline uk-width-1-1 footer">
+  <div class="uk-position-top-right uk-padding-small">
+    <a uk-totop uk-scroll></a>
+  </div>
+  <div class="uk-container">
+
+    
+
+    <div class="uk-column-1-2 uk-column-divider">
+      <div>
+        <a class="uk-link-muted" href="/fighters">Fighters</a>
+        <br>
+        <a class="uk-link-muted" href="/api/reference">API</a>
+      </div>
+
+      <div>
+        <% if (user) { %>
+          <a class="uk-link-muted" href="/logout">Log Out</a>
+        <% } else { %>
+          <a class="uk-link-muted" href="/auth/google">Login</a>
+        <% } %>
+        <br>
+        <a class="uk-link-muted" href="/credits">Credits</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- End main container in header.ejs-->
+<div>
 </body>
 </html>
