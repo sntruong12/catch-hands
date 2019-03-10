@@ -23,6 +23,14 @@ var fighterSchema = new Schema({
     type: String,
     required: true
   },
+  stock_icon_url: {
+    type: String,
+    required: true
+  },
+  color: {
+    type: String,
+    required: true
+  },
   combos: [{
     type: String,
   }]
