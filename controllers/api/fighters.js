@@ -3,9 +3,10 @@ var Fighter = require('../../models/api/fighter');
 module.exports = {
   getAllFighters,
   getOneFighter,
-  createFighter,
-  updateFighter,
-  deleteFighter,
+  // createFighter,
+  // updateFighter,
+  // deleteFighter,
+  
   // api reference page
   index
 };
@@ -20,6 +21,8 @@ function getAllFighters(req, res) {
           "debut": fighter.debut,
           "series": fighter.series,
           "image_url": fighter.image_url,
+          "stock_icon_url": fighter.stock_icon_url,
+          "color": fighter.color
           // "combos": fighter.combos
         }
         return details
@@ -41,6 +44,8 @@ function getOneFighter(req, res) {
         "debut": fighter.debut,
         "series": fighter.series,
         "image_url": fighter.image_url,
+        "stock_icon_url": fighter.stock_icon_url,
+        "color": fighter.color
         // "combos": fighter.combos
       }
       return details
