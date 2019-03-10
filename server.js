@@ -16,6 +16,7 @@ require('./config/passport');
 
 // import user routes
 var indexRouter = require('./routes/index');
+var pagesRouters = require('./routes/pages');
 var fightersRouter = require('./routes/fighters');
 var mainsRouter = require('./routes/mains');
 var combosRouter = require('./routes/combos')
@@ -49,6 +50,7 @@ app.use(methodOverride('_method'));
 
 // user routes
 app.use('/', indexRouter);
+app.use('/', pagesRouters);
 app.use('/fighters', fightersRouter);
 app.use('/mains', mainsRouter);
 app.use('/', combosRouter);
