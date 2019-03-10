@@ -8,4 +8,7 @@ router.get('/fighters/:id', fightersCtrl.getOneFighter);
 // router.put('/fighters/:id', fightersCtrl.updateFighter)
 // router.delete('/fighters/:id', fightersCtrl.deleteFighter)
 
+// api reference route
+router.get('/reference', fightersCtrl.index)
+
 module.exports = router;
