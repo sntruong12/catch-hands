@@ -14,6 +14,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit-icons.min.js"></script>
 </head>
 <body>
+  <!-- Begin Main Container -->
   <div class="main-container">
   <!-- Navbar -->
   <nav class="uk-navbar-container" uk-navbar>
@@ -35,10 +36,10 @@
 
       <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
         <li><a href="/fighters">Fighters</a></li>
-        <li><a href="/api/reference">API</a></li>
         <% if (user) { %>
         <li><a href="/mains">My Fighters</a></li>
         <% } %>
+        <li><a href="/api/reference">API</a></li>
         <li class="uk-nav-divider"></li>
         <!-- Login  -->
         <% if (user) { %>
