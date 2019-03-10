@@ -1,20 +1,26 @@
 <%- include('../partials/header') %>
 
-<h1 class="uk-text-center uk-text-uppercase">fighters!</h1>
+<div class="uk-container uk-padding">
+  <h1 class="uk-text-center uk-text-uppercase uk-heading-primary uk-heading-line">
+    <span>fighters</span>
+  </h1>
+</div>
 
-<div class="uk-child-width-1-6@s uk-grid-collapse uk-text-center" uk-grid>
-    <% fighters.forEach(fighter => { %>
-    <div>
-        <div class="uk-tile uk-tile-default">
-            <a class="uk-link-text" href="/fighters/<%= fighter.id %>">
-              <img src="<%= fighter.image_url %>" width="100px" alt="" uk-img>
-            </a>
-            <a class="uk-link-text" href="/fighters/<%= fighter.id %>">
-              <%= fighter.name %>
-            </a>
-        </div>
-    </div>
-    <% }) %>
+<div class="uk-container uk-padding">
+  <div class="uk-child-width-1-6@s uk-grid-collapse uk-text-center" uk-grid>
+      <% fighters.forEach(fighter => { %>
+      <div>
+          <div class="uk-tile uk-tile-default fighter-card">
+              <a class="uk-link-text" href="/fighters/<%= fighter.id %>">
+                <img src="<%= fighter.stock_icon_url %>" alt="<%= fighter.name %>" uk-img>
+              </a>
+              <a class="uk-link-text" href="/fighters/<%= fighter.id %>">
+                <%= fighter.name %>
+              </a>
+          </div>
+      </div>
+      <% }) %>
+  </div>
 </div>
 
 <%- include('../partials/footer') %>
