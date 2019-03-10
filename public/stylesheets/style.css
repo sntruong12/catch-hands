@@ -24,11 +24,11 @@ body {
 }
 
 .main-container {
-  min-height: 100vh; /* will cover the 100% of viewport */
+  min-height: 100vh;
   overflow: hidden;
   display: block;
   position: relative;
-  padding-bottom: 176px; /* height of your footer */
+  padding-bottom: 176px; /* height of your footer on desktop */
 }
 
 .footer {
@@ -39,6 +39,6 @@ body {
 
 @media screen and (max-width: 960px) {
   .main-container {
-    padding-bottom: 116px; /* height of your footer */
+    padding-bottom: 116px; /* height of footer on tablet and mobile*/
   }
 }
