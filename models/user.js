@@ -20,6 +20,12 @@ var userSchema = new Schema({
     image_url: {
       type: String,
     },
+    stock_icon_url: {
+      type: String
+    },
+    color: {
+      type: String
+    },
     combos: [String]
   }],
   googleId: String
