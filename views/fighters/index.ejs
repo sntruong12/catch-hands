@@ -11,12 +11,24 @@
       <% fighters.forEach(fighter => { %>
       <div>
           <div class="uk-tile uk-tile-default fighter-card">
-              <a class="uk-link-text" href="/fighters/<%= fighter.id %>">
+              <a uk-toggle="target: #catch-hands-<%= fighter.id %>">
                 <img data-src="<%= fighter.stock_icon_url %>" alt="<%= fighter.name %>" data-width="" data-height="" uk-img>
               </a>
-              <a class="uk-link-text" href="/fighters/<%= fighter.id %>">
+              <a class="uk-link-text" uk-toggle="target: #catch-hands-<%= fighter.id %>">
                 <%= fighter.name %>
               </a>
+              <!-- Modal Start -->
+              <div id="catch-hands-<%= fighter.id %>" class="uk-flex-top" uk-modal>
+                <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+      
+                  <button class="uk-modal-close-default" type="button" uk-close></button>
+
+                  <h2 class="uk-modal-title"><%= fighter.name %></h2>
+                  <p>I know you tryna catch these hands</p>
+            
+                </div>
+              </div>
+              <!-- Modal End -->
           </div>
       </div>
       <% }) %>
