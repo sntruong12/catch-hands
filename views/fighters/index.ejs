@@ -19,12 +19,20 @@
               </a>
               <!-- Modal Start -->
               <div id="catch-hands-<%= fighter.id %>" class="uk-flex-top" uk-modal>
-                <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+                <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical uk-width-auto">
       
                   <button class="uk-modal-close-default" type="button" uk-close></button>
 
-                  <h2 class="uk-modal-title"><%= fighter.name %></h2>
-                  <p>I know you tryna catch these hands</p>
+                  <img data-src="<%= fighter.image_url %>" alt="<%= fighter.name %>" width="250px" uk-img>
+                  <h2 class="uk-text-uppercase uk-heading-line">
+                    <span><%= fighter.name %></span>
+                  </h2>
+
+                  <% if(user) { %>
+                    <a class="uk-link-text" href="/mains/add/<%= fighter.id %>">Add Fighter</a>
+                  <% } else { %>
+                    <a class="uk-link-text" href="/auth/google">Login to add fighters</a>
+                  <% } %>
             
                 </div>
               </div>
