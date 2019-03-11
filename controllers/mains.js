@@ -51,6 +51,8 @@ function addMain(req, res) {
         "id": fighter.id,
         "name": fighter.name,
         "image_url": fighter.image_url,
+        "stock_icon_url": fighter.stock_icon_url,
+        "color": fighter.color,
         "combos": fighter.combos
       }
       return newMain
