@@ -28,6 +28,7 @@ Here is a [link](https://www.lucidchart.com/invitations/accept/a9fd1264-b675-40b
 
 1. Mongoose/MongoDB, Express, NodeJS
 2. OAuth Google Authentication using PassportJS
+3. UIKit for components and responsive design
 
 ## Challenges/Lessons
 
