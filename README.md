@@ -8,7 +8,7 @@ Super Smash Brothers Ultimate, a fighting game on the Nintendo Switch, has sold 
 
 ## User Stories
 
-As a user, I want to see and index of all the Fighters from the game.
+As a user, I want to see an index of all the Fighters from the game.
 
 As a user, I want to add fighters to my fighters page.
 
